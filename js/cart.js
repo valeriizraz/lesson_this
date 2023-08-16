@@ -17,10 +17,12 @@ const cart = {
   set Discount(str) {
     if (str === 'METHED') {
       this.discount = 15;
-    } else if (str === 'NEWYEAR') {
+    }
+
+    if (str === 'NEWYEAR') {
       this.discount = 21;
     } else {
-      this.discount = 0;
+      console.log('no');
     }
   },
 
@@ -60,7 +62,7 @@ const cart = {
   },
 };
 
-cart.Discount = 'NEWYEAR';
+cart.Discount = 'METHED';
 cart.add('table', 3, 1);
 cart.add('mobil', 5, 2);
 cart.add('televisor', 3, 10);
